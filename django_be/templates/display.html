@@ -6,8 +6,12 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>This is django app page!</h1>
-    {{request.user}}
-    <p>It is awesome</p>
+    <h6>{{ request.user}}</h6>
+    <p>{{ tex}}, {{num}}</p>
+    <ul>
+      {% for items in my_lis%}
+      <li>{{ items }}</li>
+      {% endfor%}
+    </ul>
   </body>
 </html>

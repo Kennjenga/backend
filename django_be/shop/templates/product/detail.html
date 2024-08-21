@@ -6,8 +6,12 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>This is django app page!</h1>
-    {{request.user}}
-    <p>It is awesome</p>
+    <h1>Item</h1>
+    <p>{{ object.name }}</p>
+    <p>
+      {% if object.description %} {{ object.description }} {% else %}
+      Description coming soon ... {% endif %}
+    </p>
+    <p>{{ object.price}}</p>
   </body>
 </html>

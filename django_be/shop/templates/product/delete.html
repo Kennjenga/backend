@@ -6,8 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>This is django app page!</h1>
-    {{request.user}}
-    <p>It is awesome</p>
+    <h1>Are you sure you want to delete {{ object.name }}?</h1>
+
+    <form method="POST">
+      {% csrf_token %} <button type="submit">Delete</button>
+    </form>
   </body>
 </html>

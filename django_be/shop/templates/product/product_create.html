@@ -6,8 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>This is django app page!</h1>
-    {{request.user}}
-    <p>It is awesome</p>
+    <h2>Create a product to be saved to the DB</h2>
+    <form action="." method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <input type="submit" value="save" />
+    </form>
   </body>
 </html>
